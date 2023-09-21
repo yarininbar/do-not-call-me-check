@@ -1,17 +1,17 @@
 
 # "DO NOT CALL ME" check tool
 
-In January 2023, The Israel's Consumer Protection approved new regulations which limit businesses from contacting consumers for marketing offers via phone calls.
+In January 2023, The Israeli Consumer Protection Authorithy approved new regulations which limit businesses from contacting consumers with marketing offers via phone calls.
 
-This tool helps to check in convenient way whether a customers are registered to this database or not, and if it is possible to call them with a marketing offer.
+This tool helps to check in convenient way whether a consumer is registered to this database or not, and if it is possible to call them for marketing purposes.
 
-All you have to do, is go to your personal zone in "Do not call me" official website, and generate an access token and identifer, and type it in this tool.
+All you have to do, is to generate from your personal zone in "Do not call me" official website an access token and identifer, and type it into this tool.
 
-**This tool is used in few retail companies that perform telemarketing calls in Israel.** 
+**This tool was originally made for a retail company that performs telemarketing calls in Israel. Now it is available for your free use😀**
 
 
 
-## Features
+## Key Features 🎯
 
 - Check the validation of the phone number.
 - Check the validation of the JWT token from DNC.
@@ -19,11 +19,11 @@ All you have to do, is go to your personal zone in "Do not call me" official web
 - Display instructions how to get the token from DNC website, and information about the law.
 
 
-## Tech Stack
+## Tech Stack 👨🏼‍💻
 
-**Client:** React, Redux, Axios, Material Ui, Typescript, CSS
+**Client side:** React, Redux, Axios, Material Ui, Typescript, CSS
 
-**Server:** Node, Express, Typescript
+**Server side:** Node.js, Express, Typescript
 
 
 ## Screenshots
@@ -35,5 +35,4 @@ All you have to do, is go to your personal zone in "Do not call me" official web
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-# do-not-call-me
+p
