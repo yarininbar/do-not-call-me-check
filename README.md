@@ -13,10 +13,10 @@ All you have to do, is to generate from your personal zone in "Do not call me" o
 
 ## Key Features 🎯
 
-- Check the validation of the phone number.
-- Check the validation of the JWT token from DNC.
-- Save token & identifer using redux.
-- Display instructions how to get the token from DNC website, and information about the law.
+- Validation of the phone number entered.
+- Validation of the JWT token entered.
+- The token & identifer are stored using Redux.
+-The tool provides instructions of how to generate the token from Cunsumer Protection Authorithy website's, and more information about the law.
 
 
 ## Tech Stack 👨🏼‍💻
