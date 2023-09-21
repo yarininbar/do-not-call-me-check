@@ -16,7 +16,7 @@ All you have to do, is to generate from your personal zone in "Do not call me" o
 - Validation of the phone number entered.
 - Validation of the JWT token entered.
 - The token & identifer are stored using Redux.
--The tool provides instructions of how to generate the token from Cunsumer Protection Authorithy website's, and more information about the law.
+- The tool provides instructions of how to generate the token from Cunsumer Protection Authorithy website's, and more information about the law.
 
 
 ## Tech Stack 👨🏼‍💻
