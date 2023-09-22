@@ -7,7 +7,7 @@ This tool helps to check in convenient way whether a consumer is registered to t
 
 All you have to do, is to generate from your personal zone in "Do not call me" official website an access token and identifer, and type it into this tool.
 
-**This tool was originally made for a retail company that performs telemarketing calls in Israel. Now it is available for your free use😀**
+**This tool was originally made for a retail company that performs telemarketing calls in Israel. Now it is available for your free use  😀**
 
 
 
