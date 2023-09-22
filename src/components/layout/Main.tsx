@@ -23,7 +23,7 @@ function Main(): JSX.Element {
 
     const [phone, setPhone] = useState<string>("");
     const [result, setResult] = useState<boolean>(false);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(false);
     const [displayError, setDisplayError] = useState<boolean>(false);
     const [msg, setMsg] = useState<string>("");
 
