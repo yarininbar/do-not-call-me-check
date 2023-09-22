@@ -7,6 +7,7 @@ import LoadingDialog from "../LoadingDialog";
 import { CredentialsModel } from "../../models/CredentialsModel";
 import SetCredentials from "../SetCredentials";
 import store from "../../redux/Store";
+import ErrorDialog from "../ErrorDialog";
 
 
   
@@ -22,7 +23,9 @@ function Main(): JSX.Element {
 
     const [phone, setPhone] = useState<string>("");
     const [result, setResult] = useState<boolean>(false);
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [displayError, setDisplayError] = useState<boolean>(false);
+    const [msg, setMsg] = useState<string>("");
 
     const [userCredentials, SetUserCredentials] = useState<CredentialsModel | undefined>(store.getState().credentialsReducer.credentials);
 
@@ -60,11 +63,14 @@ useEffect(() => {
   
 
          })
-         .catch((reason: AxiosError) => {
+         .catch((error: AxiosError) => {
+          setDisplayError(true);
+          setMsg(error.message)
             setLoading(false);
         })
         } else {
-            alert("מספר הטלפון שהזנת אינו תקין. המספר צריך להיות בין 9-10 ספרות בלבד ולהתחיל בספרה 0");
+          setDisplayError(true);
+            setMsg("זה לא נראה כמו מספר טלפון. נסה שנית.");
         }
     }
 
@@ -90,6 +96,13 @@ useEffect(() => {
       {!userCredentials &&
       <SetCredentials/>
       }
+
+
+
+    <Dialog open={displayError} onClose={() => setDisplayError(false)}>
+      <ErrorDialog msg={msg}/>
+      </Dialog>
+      
 
 
 

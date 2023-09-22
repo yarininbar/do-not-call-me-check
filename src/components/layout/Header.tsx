@@ -31,7 +31,7 @@ function Header(): JSX.Element {
         <Typography variant="h5">כלי לבדיקת מספרי טלפון מול מאגר ״אל תתקשר אליי״</Typography>
         <div className="nav">
 
-        <Button className="app-button" variant="outlined" href="https://www.gov.il/he/service/do-not-call-me">
+        <Button className="app-button" variant="outlined" href="https://www.gov.il/he/service/do-not-call-me" target="_blank">
         <DocumentScannerOutlined />
 הנחיות החוק
   </Button>

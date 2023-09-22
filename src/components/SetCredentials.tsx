@@ -1,9 +1,10 @@
 import { AutoFixHigh, DeleteOutline, Help, HelpOutline, HelpOutlineRounded, QuestionAnswerOutlined, QuestionMarkOutlined, QuestionMarkRounded, SettingsOutlined } from "@mui/icons-material";
-import { Button, Card, CardContent, Container, Divider, IconButton, TextField, Typography } from "@mui/material";
+import { Button, Card, CardContent, Container, Dialog, Divider, IconButton, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import store from "../redux/Store";
 import { CredentialsModel } from "../models/CredentialsModel";
 import { removeCredentialsAction, setCredentialsAction } from "../redux/CredentialsState";
+import HelpDialog from "./HelpDialog";
 
 
 
@@ -17,6 +18,7 @@ function SetCredentials(props: SetCredentialsProps): JSX.Element {
 
     const [token, setToken] = useState<string>("");
     const [identifier, setIdentifier] = useState<string>("");
+    const [openHelp, setOpenHelp] = useState<boolean>(false);
 
     const handleSubmit = () => {
 
@@ -41,11 +43,16 @@ function SetCredentials(props: SetCredentialsProps): JSX.Element {
                             </Typography>
               <Container style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 {!props.edit &&
-              <Button>
+              <Button onClick={() => setOpenHelp(true)}>
     <HelpOutline />
 איך מקבלים פרטי זיהוי?
   </Button>
   }
+
+
+<Dialog open={openHelp} onClose={() => setOpenHelp(false)}>
+<HelpDialog/>
+</Dialog>
 
                 </Container>
               <CardContent>
@@ -79,6 +86,8 @@ function SetCredentials(props: SetCredentialsProps): JSX.Element {
                 </Container>
               </CardContent>
             </Card>
+
+
 
     );
 
